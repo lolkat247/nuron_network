@@ -91,14 +91,12 @@ backp("nuron1", new_data_line);
 
 ## Deployment
 
-### How to use
-
 Download newest version and #include all modules you'd like to use.
 All nuron_3.h or higher files depend on nuron_2.h.
 
-### Example
+## Example
 
-**First Run**
+Test code:
 
 main.cpp
 ```
@@ -134,6 +132,8 @@ nuron_1-1.txt
 
 ```
 
+**First Run**
+
 Output:
 ```
 nuron_1-1: No data file to load, making new file...done
@@ -166,6 +166,6 @@ This project is licensed under the GNU v3 License - see the [LICENSE.md](LICENSE
 
 ## Acknowledgments
 
-* (giant_nural_network)[https://www.youtube.com/user/LogicGodTV] 
-* My friends over at (Stack Overflow)[https://stackoverflow.com]
+* [giant_nural_network](https://www.youtube.com/user/LogicGodTV)
+* My friends over at [Stack Overflow](https://stackoverflow.com)
 * Hat tip to anyone whose code was used.
