@@ -98,10 +98,64 @@ All nuron_3.h or higher files depend on nuron_2.h.
 
 ### Example
 
+**First Run**
+
+main.cpp
 ```
-!@#$%^&*()
+#include "nuron_2.h"
+#include "nuron_3.h"
+using namespace std;
+
+int main(){
+    float aw1, aw2, aw3, ab, ar;
+    nuron_tr3("nuron_1-1", aw1, aw2, aw3, ab, true);
+
+    float var1, var2, var3;
+    cout << "var1: ";
+    cin >> var1;
+    cout << "var2: ";
+    cin >> var2;
+    cout << "var3: ";
+    cin >> var3;
+
+    ar = determine_3(var1, var2, var3, aw1, aw2, aw3, ab);
+    cout << ar << endl;
+
+    return 0;
+};
 ```
 
+nuron_1-1.txt
+```
+0;0;0
+4;4;0
+6;6;1
+9;9;1
+
+```
+
+Output:
+```
+nuron_1-1: No data file to load, making new file...done
+nuron_1-1: Please exit and edit data file: nuron_1-1.txt accordingly.
+var1: (cin)1
+var2: (cin)1
+var3: (cin)1
+0.500000
+```
+
+**Second Run**
+
+Output
+```
+nuron_1-1: File acknowledged.
+nuron_1-1: File loaded.
+nuron_1-1: 1s to train
+var1: (cin)1
+var2: (cin)1
+var3: (cin)1
+0.000048
+```
 ## Authors
 
 * **Jacob Iglesias** - *Initial work* - [lolkat247](https://github.com/lolkat247)
