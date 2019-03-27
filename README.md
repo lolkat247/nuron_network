@@ -13,40 +13,106 @@ Things you should have:
 * A will to learn
 * patience.
 
-### Explanation of functions
+## Explanation of functions
 
-_+_+_+_ CONTINUE HERE +_+_+_+_+_
+### Sigmoid
+Used for probability
+```
+var2 = sigmoid(var1);
+```
+
+### Sigmoid Prime
+Used as internal function
+```
+var2 = sigmoid_p(var1);
+```
+
+### Randint
+Random integer between 0 - var1
+```
+var2 = randint(var1);
+```
+
+### fexists
+Check if a file exists for not, returns 1 on success
+```
+if (fexists("file.txt")){
+  //Some code
+};
+```
+
+### nuron_tr?
+Used to generate algorithm from training data
+
+* tr2 uses 2 weights,
+* tr3 uses 3 weights,
+* etc...
+
+This function will create a file named witht he string you provided + .txt
+_YOU MUST EDIT THIS DATA IN ORDER FOR IT TO WORK!_
+The data file created _MUST_ have an empty newline at the end or backp will not work
+nuron_tr? will return 0 on success and 1 on error
+
+Currently supports 2-3
+```
+float w1, w2, b
+if (nuron_tr3("nuron1", w1, w2, b, true){ // True is optional, it allows debug output
+  cout << "Algorithm not generated." << endl;
+}
+else {
+  // next bit of code
+};
+```
+
+### determine_?
+Used to generate probable output based on algorithm and outputs to provided variables (float)
+Output will be: 0 < output < 1
+
+* _2 uses 2 weights,
+* _3 uses 3 weights,
+* etc...
+
+```
+float var1 = 1 // test points
+float var2 = 1
+
+float w1 = 0.5 // weights and bias
+float w2 = 0.5
+float b = 0.5
+
+cout << determine_2(var1, var2, w1, w2, b) << endl;
+```
+
+### backp
+Used to back propagate data into the training file
+```
+string new_data_line = "2;4;1;0";
+backp("nuron1", new_data_line);
+```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+### How to use
 
-## Built With
+Download newest version and #include all modules you'd like to use
+All nuron_3.h or higher files depend on nuron_2.h
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+### Example
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+```
+!@#$%^&*()
+```
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Jacob Iglesias** - *Initial work* - [lolkat247](https://github.com/lolkat247)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU v3 License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
+* (giant_nural_network)[https://www.youtube.com/user/LogicGodTV] 
+* My friends over at (Stack Overflow)[https://stackoverflow.com]
 * Hat tip to anyone whose code was used
-* Inspiration
-* etc
